@@ -47,7 +47,7 @@ app.post('/', function(req,res) {
                     },
                     "label": {
                         "type": "plain_text",
-                        "text": "Accrual Status",
+                        "text": " ",
                         "emoji": true
                     }
                 },
@@ -86,10 +86,48 @@ app.post('/', function(req,res) {
                     }
                 },
                 {
+                    "type": "input",
+                    "element": {
+                        "type": "plain_text_input",
+                        "action_id": "plain_text_input-action"
+                    },
+                    "label": {
+                        "type": "plain_text",
+                        "text": "Engage Support Link",
+                        "emoji": true
+                    }
+                },
+                {
+                    "type": "section",
+                    "text": {
+                        "type": "plain_text",
+                        "text": "*CFO Approval*",
+                        "emoji": true
+                    }
+                },
+                {
+                    "type": "actions",
+                    "elements": [
+                        {
+                            "type": "button",
+                            "text": {
+                                "type": "plain_text",
+                                "text": "I approve",
+                                "emoji": true
+                            },
+                            "value": "click_me_123",
+                            "action_id": "actionId-0"
+                        }
+                    ]
+                },
+                {
+                    "type": "divider"
+                },
+                {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": "System"
+                        "text": "*System*"
                     },
                     "accessory": {
                         "type": "radio_buttons",
@@ -115,6 +153,21 @@ app.post('/', function(req,res) {
                     }
                 },
                 {
+                    "type": "actions",
+                    "elements": [
+                        {
+                            "type": "button",
+                            "text": {
+                                "type": "plain_text",
+                                "text": "Voucher's Completed  :heavy_check_mark:",
+                                "emoji": true
+                            },
+                            "value": "click_me_123",
+                            "action_id": "actionId-0"
+                        }
+                    ]
+                },
+                {
                     "type": "input",
                     "element": {
                         "type": "plain_text_input",
@@ -129,7 +182,7 @@ app.post('/', function(req,res) {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": "Voucher Creator"
+                        "text": "*Voucher Creator*"
                     },
                     "accessory": {
                         "type": "users_select",
@@ -142,9 +195,8 @@ app.post('/', function(req,res) {
                     }
                 }
             ]
-        }
+        }   
     );
-
 });
 
 app.listen(process.env.PORT||3000, function () {
