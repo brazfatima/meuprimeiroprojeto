@@ -5,7 +5,22 @@ var app = express();
 
 app.post('/', function(req,res) {
    
-    res.send('selecione o cliente');
+    res.send('selecione o cliente'
+    {
+        "blocks": [
+            {
+                "type": "header",
+                "text": {
+                    "type": "plain_text",
+                    "text": "Accrual Status",
+                    "emoji": true
+                }
+            }
+        ]
+    }
+    
+    
+    );
 
 });
 
