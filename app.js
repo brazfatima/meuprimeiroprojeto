@@ -5,7 +5,18 @@ var app = express();
 
 app.post('/', function(req,res) {
    
-    res.send('xxx');
+    res.send({
+        "blocks": [
+            {
+                "type": "section",
+                "text": {
+                    "type": "plain_text",
+                    "text": "testetes",
+                    "emoji": true
+                }
+            }
+        ]
+    });
 
 });
 
