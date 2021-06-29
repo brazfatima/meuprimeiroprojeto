@@ -4,8 +4,7 @@ var express = require('express');
 var app = express();
 
 app.post('/', function(req,res) {
-    console.log("entrou aqui")
-    res.send('ola mundo');
+       res.send('selecione o cliente');
 
 });
 
