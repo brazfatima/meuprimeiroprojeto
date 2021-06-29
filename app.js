@@ -5,7 +5,7 @@ var app = express();
 
 app.post('/', function(req,res) {
    
-    res.send('selecione o cliente'
+    res.send(
     {
         "blocks": [
             {
